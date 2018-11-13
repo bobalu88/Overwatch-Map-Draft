@@ -1,0 +1,40 @@
+h1 {
+    color: #AEB6BF;
+    font: "Lucida Console";
+    margin-left: 20px;
+}
+
+p {
+    color: #D6DBDF;
+    font: "Lucida Console";
+    margin-left: 20px;
+}
+
+li {
+    color: #D6DBDF;
+    font: "Lucida Console";
+    margin-left: 20px;
+}
+
+#bg {
+    background-size: 100% auto;
+    background-repeat: repeat;
+}
+
+a:link {
+    color: #D6EAF8;
+    font: "Lucida Console";
+    margin-left: 10px;
+}
+
+a:visited {
+    color: #F5EEF8;
+    font: "Lucida Console";
+    margin-left: 10px;
+}
+
+#dark {
+    color: black;
+    font: "Lucida Console";
+    margin-left: 20px;
+}

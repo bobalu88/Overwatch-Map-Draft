@@ -1,19 +1,23 @@
+<!DOCTYPE html>
 <html>
     <head>
-      {% if title %}
-      <title>{{ title }}</title>
-      {% else %}
-      <title>Welcome</title>
-      {% endif %}
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>Welcome</title>
+        {% endif %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/style.css">
+        <nav class="navbar navbar-default navbar-inverse"><br>
+        <ul class="nav nav-pills">
+            <li role="presentation"><a href="{{ url_for('index') }}">Home</a></li>
+            <li role="presentation"><a href="{{ url_for('about') }}">About</a></li>
+            <li role="presentation"><a href="{{ url_for('form') }}">Create New Session</a></li>
+            <li role="presentation"><a href="{{ url_for('branch') }}">Current Session</a></li>
+        </ul>
+        </nav>
     </head>
-    <body>
-        <div>Navigation:
-            <a href="{{ url_for('index') }}">Home</a> |
-            <a href="{{ url_for('about') }}">About</a> |
-            <a href="{{ url_for('form') }}">Create New Session</a> |
-            <a href="{{ url_for('spectator') }}">Spectate</a>
-        </div>
-        <hr>
+    <body id="bg" background="/static/img/background.jpg">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         <ul>

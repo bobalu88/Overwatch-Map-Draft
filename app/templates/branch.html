@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Draft</h1>
-    <div>Links:
-            <a href="{{ url_for('team1') }}">Team 1</a> |
-            <a href="{{ url_for('team2') }}">Team 2</a> |
-            <a href="{{ url_for('spectator') }}">Spectator</a> |
-            <a href="{{ url_for('admin') }}">Admin</a>
-    </div>
+    <h1>{{ tournament }}</h1>
+    <a class="btn btn-primary" href="{{ url_for('team1') }}" role="button">{{ team1 }}</a>
+    <a class="btn btn-primary" href="{{ url_for('team2') }}" role="button">{{ team2 }}</a>
+    <a class="btn btn-primary" href="{{ url_for('spectator') }}" role="button">Spectators</a>
+    <a class="btn btn-primary" href="{{ url_for('admin') }}" role="button">Admin</a>
 {% endblock %}

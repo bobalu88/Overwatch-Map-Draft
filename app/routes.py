@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, flash, redirect, url_for, session
 from app import app
 from app.forms import CreateSessionForm
 
@@ -16,15 +16,19 @@ def about():
 
 @app.route("/branch")
 def branch():
-    return render_template("branch.html")
+    tournament = session.get('tournament', 'My Tournament')
+    team1 = session.get('team1', 'Team 1')
+    team2 = session.get('team2', 'Team 2')
+    return render_template("branch.html", tournament=tournament, team1=team1, team2=team2)
 
 
 @app.route("/form", methods=['GET', 'POST'])
 def form():
     form = CreateSessionForm()
     if form.validate_on_submit():
-        flash('Session requested for tournament {}, team1={}, team2={}, starter={}, time={}'.format(
-            form.tournament.data, form.team1.data, form.team2.data, form.starter.data, form.time.data))
+        session['tournament'] = form.tournament.data
+        session['team1'] = form.team1.data
+        session['team2'] = form.team2.data
         return redirect(url_for('branch'))
     return render_template("form.html", title="Create New Session", form=form)
 
