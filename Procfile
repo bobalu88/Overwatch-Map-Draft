@@ -1,1 +1,1 @@
-web: gunicorn overwatch-map-draft.wsgi
+web: flask db upgrade; flask translate compile; gunicorn microblog:app
