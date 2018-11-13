@@ -3,13 +3,7 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField, Radio
 from wtforms.validators import DataRequired
 
 
-class LoginForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    remember_me = BooleanField('Remember Me')
-    submit = SubmitField('Sign In')
-
-
+# Form to create a new session
 class CreateSessionForm(FlaskForm):
     tournament = StringField('Tournament', validators=[DataRequired()])
     team1 = StringField('Team 1', validators=[DataRequired()])
