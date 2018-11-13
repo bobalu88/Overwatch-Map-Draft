@@ -5,6 +5,3 @@ app = Flask(__name__, static_folder="templates/dist/", template_folder="template
 app.config.from_object(Config)
 
 from app import routes
-
-if __name__ == "__main__":
-    app.run()
