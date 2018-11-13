@@ -11,9 +11,9 @@ class LoginForm(FlaskForm):
 
 
 class CreateSessionForm(FlaskForm):
-    tournament = StringField('Tournament')
-    team1 = StringField('Team 1')
-    team2 = StringField('Team 2')
-    starter = RadioField('First Pick', choices=[('0', 'Random'), ('1', 'Team 1'), ('2', 'Team 2')])
-    time = IntegerField('Time Limit')
+    tournament = StringField('Tournament', validators=[DataRequired()])
+    team1 = StringField('Team 1', validators=[DataRequired()])
+    team2 = StringField('Team 2', validators=[DataRequired()])
+    starter = RadioField('First Pick', choices=[('0', 'Random'), ('1', 'Team 1'), ('2', 'Team 2')], validators=[DataRequired()])
+    time = IntegerField('Time Limit', validators=[DataRequired()])
     submit = SubmitField('Create Session')
