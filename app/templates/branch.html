@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Draft</h1>
+    <div>Links:
+            <a href="{{ url_for('team1') }}">Team 1</a> |
+            <a href="{{ url_for('team2') }}">Team 2</a> |
+            <a href="{{ url_for('spectator') }}">Spectator</a> |
+            <a href="{{ url_for('admin') }}">Admin</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Create New Session</h1>
+    <form action="" method="post" novalidate>
+        {{ form.csrf_token }}
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.tournament.label }}<br>
+            {{ form.tournament(size=32) }}
+            {% for error in form.tournament.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.team1.label }}<br>
+            {{ form.team1(size=32) }}
+        </p>
+        <p>
+            {{ form.team2.label }}<br>
+            {{ form.team2(size=32) }}
+        </p>
+        <p>
+            {{ form.starter.label }} <br>
+            {{ form.starter() }}
+        </p>
+        <p>
+            {{ form.time.label }} : {{ form.time() }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
