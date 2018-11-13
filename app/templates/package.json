@@ -23,7 +23,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --progress -d --config webpack.config.js --watch",
     "start": "webpack-dev-server --hot",
-    "postinstall": "npm run start"
+    "heroku-postbuild": "webpack -p --progress --config webpack.config.js"
   },
   "babel": {
     "presets": [
