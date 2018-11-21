@@ -23,14 +23,16 @@ def about():
 # Links to each team, etc
 @app.route("/<page>/branch")
 def branch(page):
-    tournament = session.get('tournament', 'My Tournament')
-    team1 = session.get('team1', 'Team 1')
-    team2 = session.get('team2', 'Team 2')
+    tournament = 'My Tournament'
+    team1 = 'Team 1'
+    team2 = 'Team 2'
     try:
         query = db.session.query(Tournament).filter(Tournament.url == page).first()
-        flash(query.url)
+        tournament = query.tournament
+        team1 = query.team1
+        team2 = query.team2
     except:
-        flash("You tried *")
+        flash("Something went wrong")
     return render_template("branch.html", tournament=tournament, team1=team1, team2=team2, url=page)
 
 
@@ -52,7 +54,7 @@ def form():
             curr = Tournament(url, tournament, team1, team2, starter, time)
             db.session.add(curr)
             db.session.commit()
-            return redirect(url_for('branch', page=url))
+        return redirect(url_for('branch', page=url))
     return render_template("form.html", title="Create New Session", form=form)
 
 
