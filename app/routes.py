@@ -21,7 +21,7 @@ def about():
 
 
 # Links to each team, etc
-@app.route("/branch/<page>")
+@app.route("/<page>/branch")
 def branch(page):
     tournament = session.get('tournament', 'My Tournament')
     team1 = session.get('team1', 'Team 1')
@@ -57,25 +57,25 @@ def form():
 
 
 # Team 1's banning page
-@app.route("/team1/<page>")
+@app.route("/<page>/team1")
 def team1(page):
     return render_template("team1.html")
 
 
 # Team 2's banning page
-@app.route("/team2/<page>")
+@app.route("/<page>/team2")
 def team2(page):
     return render_template("team2.html")
 
 
 # Spectator
-@app.route("/spectator/<page>")
+@app.route("/<page>/spectator")
 def spectator(page):
     return render_template("spectator.html")
 
 
 # Admin
-@app.route("/admin/<page>")
+@app.route("/<page>/admin")
 def admin(page):
     return render_template("admin.html")
 
