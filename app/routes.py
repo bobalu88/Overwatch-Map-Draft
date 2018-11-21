@@ -26,6 +26,11 @@ def branch(page):
     tournament = session.get('tournament', 'My Tournament')
     team1 = session.get('team1', 'Team 1')
     team2 = session.get('team2', 'Team 2')
+    try:
+        query = db.session.query(Tournament).filter(Tournament.url == page).first()
+        flash(query.url)
+    except:
+        flash("You tried *")
     return render_template("branch.html", tournament=tournament, team1=team1, team2=team2)
 
 
@@ -40,6 +45,9 @@ def form():
         starter = form.starter.data
         time = form.time.data
         url = sanitize(form.tournament.data)
+        session['tournament'] = tournament
+        session['team1'] = team1
+        session['team2'] = team2
         if not db.session.query(Tournament).filter(Tournament.url == url).count():
             curr = Tournament(url, tournament, team1, team2, starter, time)
             db.session.add(curr)
