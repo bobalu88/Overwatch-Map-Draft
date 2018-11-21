@@ -2,6 +2,10 @@ from flask import render_template, flash, redirect, url_for, session
 from app import app
 from app.forms import CreateSessionForm
 from app.utils import sanitize
+from app.db import Tournament
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy(app)
 
 # Home page
 @app.route('/')
@@ -36,10 +40,10 @@ def form():
         starter = form.starter.data
         time = form.time.data
         url = sanitize(form.tournament.data)
-        if not app.db.session.query(app.Tournament).filter(app.Tournament.url == url).count():
-            curr = app.Tournament(url, tournament, team1, team2, starter, time)
-            app.db.session.add(curr)
-            app.db.session.commit()
+        if not db.session.query(Tournament).filter(Tournament.url == url).count():
+            curr = Tournament(url, tournament, team1, team2, starter, time)
+            db.session.add(curr)
+            db.session.commit()
             return redirect(url_for('branch', page=url))
     return render_template("form.html", title="Create New Session", form=form)
 
