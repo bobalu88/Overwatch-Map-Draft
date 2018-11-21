@@ -2,8 +2,8 @@
 
 {% block content %}
     <h1>{{ tournament }}</h1>
-    <a class="btn btn-primary" href="{{ url_for('team1') }}" role="button">{{ team1 }}</a>
-    <a class="btn btn-primary" href="{{ url_for('team2') }}" role="button">{{ team2 }}</a>
-    <a class="btn btn-primary" href="{{ url_for('spectator') }}" role="button">Spectators</a>
-    <a class="btn btn-primary" href="{{ url_for('admin') }}" role="button">Admin</a>
+    <a class="btn btn-primary" href="{{ url_for('team1', page=url) }}" role="button">{{ team1 }}</a>
+    <a class="btn btn-primary" href="{{ url_for('team2', page=url) }}" role="button">{{ team2 }}</a>
+    <a class="btn btn-primary" href="{{ url_for('spectator', page=url) }}" role="button">Spectators</a>
+    <a class="btn btn-primary" href="{{ url_for('admin', page=url) }}" role="button">Admin</a>
 {% endblock %}

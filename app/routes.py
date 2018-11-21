@@ -31,7 +31,7 @@ def branch(page):
         flash(query.url)
     except:
         flash("You tried *")
-    return render_template("branch.html", tournament=tournament, team1=team1, team2=team2)
+    return render_template("branch.html", tournament=tournament, team1=team1, team2=team2, url=page)
 
 
 # Form to create a new draft
