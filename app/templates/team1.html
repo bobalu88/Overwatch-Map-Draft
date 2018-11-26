@@ -26,10 +26,10 @@
             </section>
         </div>
         <div class="col-md-4">
-            <form id="column2">
+            <section id="column2">
             <h2>Maps</h2>
             <form class="form-inline" method="POST" action="{{ url_for('team1', page=query.url) }}">
-                <fieldset>
+                <fieldset name="ban_select">
                 {% for map in query.unbanned %}
                     <input type="radio" name="ban_select" id="{{ map[2] }}" value="{{ map[2] }}"><span style="{{ map[1] }}">{{ map[0] }}</span>
                     <br />
