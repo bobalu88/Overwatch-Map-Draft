@@ -4,6 +4,13 @@ h1 {
     margin-left: 20px;
 }
 
+h2 {
+    color: #AEB6BF;
+    font: "Lucida Console";
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 p {
     color: #D6DBDF;
     font: "Lucida Console";

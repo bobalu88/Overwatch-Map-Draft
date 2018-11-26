@@ -68,6 +68,8 @@ def team1(page):
         tournament = query.tournament
         team1 = query.team1
         team2 = query.team2
+        flash(query.tournament)
+        flash(query.team1)
     except:
         flash("Something went wrong")
     return render_template("team1.html", query=query)
