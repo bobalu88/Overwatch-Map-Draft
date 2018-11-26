@@ -2,16 +2,39 @@
 
 {% block content %}
     <link rel="stylesheet" href="/static/style.css">
-    <h1>Team 1</h1>
+    <h1>{{ query.tournament }}</h1>
     <div class="row">
-        <h1>{{ query.tournament }}</h1>
         <div class="col-md-4">
+            <h2>{{ query.team1 }}</h2>
+            {% for map in query.team1bans %}
+                {% if map[1] == 0 %}
+                <span style="color: red;">{{ map }}</span>
+                {% else if map[1] == 1 %}
+                <span style="color: green;">{{ map }}</span>
+                {% else if map[1] == 2 %}
+                <span style="color: blue;">{{ map }}</span>
+                {% else %}
+                <span style="color: orange;">{{ map }}</span>
+                {% endif %}
+            {% endfor %}
             <p>Hello3</p>
         </div>
         <div class="col-md-4">
             <p id="column2">Hello2</p>
+            {% for map in query.unbanned %}
+                {% if map[1] == 0 %}
+                <span style="color: red;">{{ map }}</span>
+                {% else if map[1] == 1 %}
+                <span style="color: green;">{{ map }}</span>
+                {% else if map[1] == 2 %}
+                <span style="color: blue;">{{ map }}</span>
+                {% else %}
+                <span style="color: orange;">{{ map }}</span>
+                {% endif %}
+            {% endfor %}
         </div>
         <div class="col-md-4">
+            <h2>{{ query.team2 }}</h2>
             <p id="column3">Hello2</p>
         </div>
     </div>

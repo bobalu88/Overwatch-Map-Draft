@@ -6,6 +6,6 @@ flask run
 
 heroku:
 heroku run python
-from app import db
+from app.model import db
+db.drop_all()  # to reset
 db.create_all()
-exit()
