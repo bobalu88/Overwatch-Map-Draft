@@ -39,8 +39,9 @@ a:visited {
     margin-left: 20px;
 }
 
-#column2 {
-   display: inline-block;
+#column2 { 
+    display: table;
+    margin: 0 auto;
 }
 
 #column3 {
