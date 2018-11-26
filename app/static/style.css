@@ -7,8 +7,6 @@ h1 {
 h2 {
     color: #AEB6BF;
     font: "Lucida Console";
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 p {
@@ -46,6 +44,11 @@ a:visited {
     margin-left: 20px;
 }
 
+#column1 {
+    float: left;
+    margin-left: 20px;
+}
+
 #column2 {
     display: table;
     margin: 0 auto;
@@ -53,5 +56,6 @@ a:visited {
 
 #column3 {
     float: right;
+    margin-right: 20px;
     margin-right: 20px;
 }

@@ -5,6 +5,7 @@
     <h1>{{ query.tournament }}</h1>
     <div class="row">
         <div class="col-md-4">
+            <section id="column1">
             <h2>{{ query.team1 }}</h2>
             {% for map in query.team1bans %}
                 <s>
@@ -22,6 +23,7 @@
                 {% endif %}
                 </s><br />
             {% endfor %}
+            </section>
         </div>
         <div class="col-md-4">
             <section id="column2">
@@ -46,7 +48,6 @@
         <div class="col-md-4">
             <section id="column3">
             <h2>{{ query.team2 }}</h2>
-            </section>
             {% for map in query.team2bans %}
                 <s>
                 {% if map[1] == 0 %}
@@ -63,6 +64,7 @@
                 {% endif %}
                 </s><br />
             {% endfor %}
+            </section>
         </div>
     </div>
 {% endblock %}
