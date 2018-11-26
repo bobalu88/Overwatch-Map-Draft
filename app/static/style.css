@@ -39,18 +39,10 @@ a:visited {
     margin-left: 20px;
 }
 
-#column1 {
-                margin-left: 25px;
-                margin-right: 25px;
+#column2 {
+    float:center
 }
 
-/* Clear floats after the columns */
-#row1:after {
-                width: 100%;
-                align-items: center;/*These two properties center vetically*/
-                height: 100vh;/*These two properties center vetically*/
-                display: flex;/*This is the attribute that separates into columns*/
-                justify-content: center;
-                text-align: center;
-                position: relative;
+#column3 {
+    float: right
 }
