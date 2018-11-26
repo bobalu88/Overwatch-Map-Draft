@@ -65,7 +65,14 @@ def team1(page):
     except:
         flash("Something went wrong")
     select = request.form.get('ban_select')
-    flash(str(select))
+    if select is not None:
+        map = query.unbanned[select]
+        query.unbanned.remove(map)
+        for i in range(select, len(query.unbanned) + 1):
+            query.unbanned[i][3] = i
+        map[3] = len(query.team1bans)
+        query.team1bans.append(map)
+        db.session.commit()
     return render_template("team1.html", query=query)
 
 
