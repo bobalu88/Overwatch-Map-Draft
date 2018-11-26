@@ -1,6 +1,6 @@
 from app import app
 from flask_sqlalchemy import SQLAlchemy
-import datetime
+from datetime import datetime
 from app.utils import create_map_list
 
 db = SQLAlchemy(app)
