@@ -26,23 +26,16 @@
             </section>
         </div>
         <div class="col-md-4">
-            <section id="column2">
+            <form id="column2">
             <h2>Maps</h2>
-            {% for map in query.unbanned %}
-                {% if map[1] == 0 %}
-                <span style="color: red;">{{ map[0] }}</span>
-                {% endif %}
-                {% if map[1] == 1 %}
-                <span style="color: green;">{{ map[0] }}</span>
-                {% endif %}
-                {% if map[1] == 2 %}
-                <span style="color: blue;">{{ map[0] }}</span>
-                {% endif %}
-                {% if map[1] == 3 %}
-                <span style="color: orange;">{{ map[0] }}</span>
-                {% endif %}
-                <br />
-            {% endfor %}
+            <form class="form-inline" method="POST" action="{{ url_for('team1'), page=query.url}}">
+                <select name="ban_select" class="selectpicker form-control">
+                {% for map in query.unbanned %}
+                    <option value="{{ map[3] }}" style="{{ map[1] }}">{{ map[0] }}</option>
+                    <br />
+                {% endfor %}
+                </select>
+            </form>
             </section>
         </div>
         <div class="col-md-4">

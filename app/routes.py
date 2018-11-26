@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for, session
+from flask import render_template, flash, redirect, url_for, session, request
 from app import app
 from app.forms import CreateSessionForm
 from app.utils import sanitize
@@ -57,16 +57,15 @@ def form():
 
 
 # Team 1's banning page
-@app.route("/<page>/team1")
+@app.route("/<page>/team1", methods=['GET', 'POST'])
 def team1(page):
-    tournament = 'My Tournament'
-    team1 = 'Team 1'
-    team2 = 'Team 2'
     query = {}
     try:
         query = db.session.query(Tournament).filter(Tournament.url == page).first()
     except:
         flash("Something went wrong")
+    select = request.form.get('ban_select')
+    flash(str(select))
     return render_template("team1.html", query=query)
 
 

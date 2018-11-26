@@ -16,8 +16,16 @@ def create_map_list():
         "Blizzard World", "Eichenwalde", "Hollywood", "King's Row", "Numbani",
         "Busan", "Ilios", "Lijiang Tower", "Nepal", "Oasis"
     ]
+    assault = "color: red;"
+    escort = "color: purple;"
+    hybrid = "color: blue;"
+    control = "color: green;"
     # Assault, Escort, Hybrid, Control (aka 2CP, Payload, Hybrid, KOTH)
-    types = [0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3]
+    types = [
+        assault, assault, assault, assault,
+        escort, escort, escort, escort, escort,
+        hybrid, hybrid, hybrid, hybrid, hybrid,
+        control, control, control, control, control]
     maps = []
     for i in range(len(names)):
         map_info = [names[i], types[i], i, i]  # name, map type/color, map id, order
