@@ -9,11 +9,14 @@
             {% for map in query.team1bans %}
                 {% if map[1] == 0 %}
                 <span style="color: red;">{{ map }}</span>
-                {% else if map[1] == 1 %}
+                {% endif %}
+                {% if map[1] == 1 %}
                 <span style="color: green;">{{ map }}</span>
-                {% else if map[1] == 2 %}
+                {% endif %}
+                {% if map[1] == 2 %}
                 <span style="color: blue;">{{ map }}</span>
-                {% else %}
+                {% endif %}
+                {% if map[1] == 3 %}
                 <span style="color: orange;">{{ map }}</span>
                 {% endif %}
             {% endfor %}
