@@ -1,20 +1,20 @@
-from app.app import db
+from app import app
 from flask_sqlalchemy import SQLAlchemy
 import datetime
 from app.utils import create_map_list
 
 
 # Create database model
-class Tournament(db.Model):
+class Tournament(app.db.Model):
     __tablename__ = "tournaments"
-    url = db.Column(db.String(120), primary_key=True, unique=True)
-    tournament = db.Column(db.String(120))
-    team1 = db.Column(db.String(120))
-    team2 = db.Column(db.String(120))
-    starter = db.Column(db.String(1))
-    time = db.Column(db.Interval)
-    timestamp = db.Column(db.DateTime)
-    bans = db.Column(db.PickleType)
+    url = app.db.Column(app.db.String(120), primary_key=True, unique=True)
+    tournament = app.db.Column(app.db.String(120))
+    team1 = app.db.Column(app.db.String(120))
+    team2 = app.db.Column(app.db.String(120))
+    starter = app.db.Column(app.db.String(1))
+    time = app.db.Column(app.db.Interval)
+    timestamp = app.db.Column(app.db.DateTime)
+    bans = app.db.Column(app.db.PickleType)
 
     def __init__(self, url, tournament, team1, team2, starter, time):
         self.url = url
