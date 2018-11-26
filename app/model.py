@@ -1,6 +1,6 @@
 from app import app
 from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
+from datetime import datetime, timedelta
 from app.utils import create_map_list
 
 db = SQLAlchemy(app)
@@ -24,7 +24,7 @@ class Tournament(db.Model):
         self.team1 = team1
         self.team2 = team2
         self.starter = starter
-        self.time = time
+        self.time = timedelta(seconds=time)
         self.timestamp = datetime.now()
         self.bans = create_map_list()
 
