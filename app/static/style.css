@@ -40,7 +40,7 @@ a:visited {
 }
 
 #column2 {
-   justify-content: center;
+   display: inline-block;
 }
 
 #column3 {
