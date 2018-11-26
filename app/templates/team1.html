@@ -29,12 +29,13 @@
             <form id="column2">
             <h2>Maps</h2>
             <form class="form-inline" method="POST" action="{{ url_for('team1', page=query.url) }}">
-                <select name="ban_select" class="selectpicker form-control">
+                <fieldset>
                 {% for map in query.unbanned %}
-                    <option value="{{ map[3] }}" style="{{ map[1] }}">{{ map[0] }}</option>
+                    <input type="radio" name="ban_select" id="{{ map[2] }}" value="{{ map[2] }}" style="{{ map[1] }}">{{ map[0] }}</input>
                     <br />
                 {% endfor %}
-                </select>
+                </fieldset>
+                <button type="submit" class="btn btn-default">Ban Map</button>
             </form>
             </section>
         </div>
