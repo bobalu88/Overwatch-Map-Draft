@@ -40,10 +40,10 @@ a:visited {
 }
 
 #column2 {
-   margin-left: auto;
-   margin-right: auto;
+   justify-content: center;
 }
 
 #column3 {
-    float: right
+    float: right;
+    margin-right: 20px;
 }
