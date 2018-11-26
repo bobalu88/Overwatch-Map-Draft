@@ -7,58 +7,59 @@
         <div class="col-md-4">
             <h2>{{ query.team1 }}</h2>
             {% for map in query.team1bans %}
-                <s>
+
                 {% if map[1] == 0 %}
-                <span style="color: red;">{{ map.name }}</span>
+                <span style="color: red;">{{ map[0] }}</span>
                 {% endif %}
                 {% if map[1] == 1 %}
-                <span style="color: green;">{{ map.name }}</span>
+                <span style="color: green;">{{ map[0] }}</span>
                 {% endif %}
                 {% if map[1] == 2 %}
-                <span style="color: blue;">{{ map.name }}</span>
+                <span style="color: blue;">{{ map[0] }}</span>
                 {% endif %}
                 {% if map[1] == 3 %}
-                <span style="color: orange;">{{ map.name }}</span>
+                <span style="color: orange;">{{ map[0] }}</span>
                 {% endif %}
-                </s><br />
+                <br />
             {% endfor %}
             <p>Hello3</p>
         </div>
         <div class="col-md-4">
             <p id="column2">Hello2</p>
             {% for map in query.unbanned %}
+                <s>
                 {% if map[1] == 0 %}
-                <span style="color: red;"><s>{{ map.name }}</s></span>
+                <span style="color: red;">{{ map[0] }}</span>
                 {% endif %}
                 {% if map[1] == 1 %}
-                <span style="color: green;"><del>{{ map.name }}</del></span>
+                <span style="color: green;">{{ map[0] }}</span>
                 {% endif %}
                 {% if map[1] == 2 %}
-                <span style="color: blue;">{{ map.name }}</span>
+                <span style="color: blue;">{{ map[0] }}</span>
                 {% endif %}
                 {% if map[1] == 3 %}
-                <span style="color: orange;">{{ map.name }}</span>
+                <span style="color: orange;">{{ map[0] }}</span>
                 {% endif %}
-                <br />
+                </s><br />
             {% endfor %}
         </div>
         <div class="col-md-4">
             <h2>{{ query.team2 }}</h2>
             {% for map in query.team2bans %}
-                <s>
+
                 {% if map[1] == 0 %}
-                <span style="color: red;">{{ map.name }}</span>
+                <span style="color: red;">{{ map[0] }}</span>
                 {% endif %}
                 {% if map[1] == 1 %}
-                <span style="color: green;">{{ map.name }}</span>
+                <span style="color: green;">{{ map[0] }}</span>
                 {% endif %}
                 {% if map[1] == 2 %}
-                <span style="color: blue;">{{ map.name }}</span>
+                <span style="color: blue;">{{ map[0] }}</span>
                 {% endif %}
                 {% if map[1] == 3 %}
-                <span style="color: orange;">{{ map.name }}</span>
+                <span style="color: orange;">{{ map[0] }}</span>
                 {% endif %}
-                </s><br />
+                <br />
             {% endfor %}
             <p id="column3">Hello2</p>
         </div>

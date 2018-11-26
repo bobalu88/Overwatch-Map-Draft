@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="846eb468-20d8-4128-b6e9-bc35b6f3b43c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/bundle.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/html/about.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/html/admin.html" beforeDir="false" />
@@ -18,7 +17,6 @@
       <change beforePath="$PROJECT_DIR$/app/templates/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/server/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/team1.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/team1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/webpack.config.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,8 +119,8 @@
       <file leaf-file-name="team1.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/team1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            <state relative-caret-position="374">
+              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -699,8 +697,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/team1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        <state relative-caret-position="374">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
