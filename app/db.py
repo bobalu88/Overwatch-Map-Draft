@@ -13,7 +13,7 @@ class Tournament(db.Model):
     team2 = db.Column(db.String(120))
     starter = db.Column(db.String(1))
     time = db.Column(db.Interval)
-    timestamp = db.Column(db.DateTime)
+    # timestamp = db.Column(db.DateTime)
     bans = db.Column(db.PickleType)
 
     def __init__(self, url, tournament, team1, team2, starter, time):
