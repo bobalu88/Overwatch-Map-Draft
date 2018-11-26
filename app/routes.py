@@ -3,9 +3,9 @@ from app import app
 from app.forms import CreateSessionForm
 from app.utils import sanitize
 from app.db import Tournament
+from app.app import db 
 from flask_sqlalchemy import SQLAlchemy
 
-db = SQLAlchemy(app)
 
 # Home page
 @app.route('/')
