@@ -39,15 +39,14 @@ a:visited {
     margin-left: 20px;
 }
 
-.column {
+.column1 {
     float: left;
     width: 33.33%;
     padding: 10px;
-    box-sizing: border-box;
 }
 
 /* Clear floats after the columns */
-.row:after {
+.row1 {
     content: "";
     display: table;
     clear: both;
