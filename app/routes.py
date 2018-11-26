@@ -5,6 +5,8 @@ from app.utils import sanitize
 from app.model import Tournament
 from flask_sqlalchemy import SQLAlchemy
 
+db = app.get_db()
+
 
 # Home page
 @app.route('/')
@@ -26,7 +28,7 @@ def branch(page):
     team1 = 'Team 1'
     team2 = 'Team 2'
     try:
-        query = app.db.session.query(Tournament).filter(Tournament.url == page).first()
+        query = db.session.query(Tournament).filter(Tournament.url == page).first()
         tournament = query.tournament
         team1 = query.team1
         team2 = query.team2
@@ -49,10 +51,10 @@ def form():
         session['tournament'] = tournament
         session['team1'] = team1
         session['team2'] = team2
-        if not app.db.session.query(Tournament).filter(Tournament.url == url).count():
+        if not db.session.query(Tournament).filter(Tournament.url == url).count():
             curr = Tournament(url, tournament, team1, team2, starter, time)
-            app.db.session.add(curr)
-            app.db.session.commit()
+            db.session.add(curr)
+            db.session.commit()
         return redirect(url_for('branch', page=url))
     return render_template("form.html", title="Create New Session", form=form)
 

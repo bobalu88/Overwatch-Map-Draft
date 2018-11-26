@@ -8,5 +8,10 @@ app.config.from_object(Config)
 heroku = Heroku(app)
 db = SQLAlchemy(app)
 
-from app import db
+
+def get_db():
+    return db
+
+
+from app import model
 from app import routes
