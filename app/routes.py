@@ -64,7 +64,7 @@ def team1(page):
         query = db.session.query(Tournament).filter(Tournament.url == page).first()
     except:
         flash("Something went wrong")
-    select = request.form.get('ban_select')
+    select = int(request.form.get('ban_select'))
     if select is not None:
         map = query.unbanned[select]
         query.unbanned.remove(map)
