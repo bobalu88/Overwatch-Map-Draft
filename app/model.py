@@ -16,7 +16,9 @@ class Tournament(db.Model):
     starter = db.Column(db.String(1))
     time = db.Column(db.Interval)
     timestamp = db.Column(db.DateTime)
-    bans = db.Column(db.PickleType)
+    unbanned = db.Column(db.PickleType)
+    team1bans = db.Column(db.PickleType)
+    team2bans = db.Column(db.PickleType)
 
     def __init__(self, url, tournament, team1, team2, starter, time):
         self.url = url
@@ -26,7 +28,9 @@ class Tournament(db.Model):
         self.starter = starter
         self.time = timedelta(seconds=time)
         self.timestamp = datetime.now()
-        self.bans = create_map_list()
+        self.unbanned = create_map_list()
+        self.team1bans = []
+        self.team2bans = []
 
     def __repr__(self):
         return '<URL %r>' % self.url

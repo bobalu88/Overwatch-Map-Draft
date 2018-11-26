@@ -59,7 +59,18 @@ def form():
 # Team 1's banning page
 @app.route("/<page>/team1")
 def team1(page):
-    return render_template("team1.html")
+    tournament = 'My Tournament'
+    team1 = 'Team 1'
+    team2 = 'Team 2'
+    query = {}
+    try:
+        query = db.session.query(Tournament).filter(Tournament.url == page).first()
+        tournament = query.tournament
+        team1 = query.team1
+        team2 = query.team2
+    except:
+        flash("Something went wrong")
+    return render_template("team1.html", query=query)
 
 
 # Team 2's banning page
