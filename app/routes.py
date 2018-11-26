@@ -2,10 +2,7 @@ from flask import render_template, flash, redirect, url_for, session
 from app import app
 from app.forms import CreateSessionForm
 from app.utils import sanitize
-from app.model import Tournament
-from flask_sqlalchemy import SQLAlchemy
-
-db = app.get_db()
+from app.model import Tournament, db
 
 
 # Home page

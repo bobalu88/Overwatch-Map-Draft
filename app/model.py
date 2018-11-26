@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 import datetime
 from app.utils import create_map_list
 
-db = app.get_db()
+db = SQLAlchemy(app)
 
 
 # Create database model
