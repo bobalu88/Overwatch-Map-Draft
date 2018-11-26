@@ -42,6 +42,8 @@ a:visited {
 .column {
     float: left;
     width: 33.33%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 /* Clear floats after the columns */
@@ -49,4 +51,5 @@ a:visited {
     content: "";
     display: table;
     clear: both;
+    box-sizing: border-box;
 }
