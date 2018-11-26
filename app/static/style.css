@@ -46,12 +46,12 @@ a:visited {
     margin-left: 20px;
 }
 
-#column2 {
+.column2 {
     display: table;
     margin: 0 auto;
 }
 
-#column3 {
+.column3 {
     float: right;
     margin-right: 20px;
 }

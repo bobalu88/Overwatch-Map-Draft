@@ -23,9 +23,8 @@
                 </s><br />
             {% endfor %}
         </div>
-        <div class="col-md-4" id="column2">
-            <p>
-            <h2>Maps</h2>
+        <div class="col-md-4">
+            <h2 class="column2">Maps</h2>
             {% for map in query.unbanned %}
                 {% if map[1] == 0 %}
                 <span style="color: red;">{{ map[0] }}</span>
@@ -41,11 +40,9 @@
                 {% endif %}
                 <br />
             {% endfor %}
-            </p>
         </div>
         <div class="col-md-4">
-            <p id="column3">
-            <h2>{{ query.team2 }}</h2>
+            <h2 class="column3">{{ query.team2 }}</h2>
             {% for map in query.team2bans %}
                 <s>
                 {% if map[1] == 0 %}
@@ -62,7 +59,6 @@
                 {% endif %}
                 </s><br />
             {% endfor %}
-            </p>
         </div>
     </div>
 {% endblock %}
