@@ -20,7 +20,7 @@ def create_map_list():
     types = [0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3]
     maps = []
     for i in range(len(names)):
-        map_info = {"name": names[i], "type": types[i], "ban": 0, "order": i}
+        map_info = [names[i], types[i], 0, i]  # name, map type/color, ban, order
         maps.append(map_info)
-    maps.sort(key=lambda x: x.order)
+    maps.sort(key=lambda x: x[3])
     return maps
