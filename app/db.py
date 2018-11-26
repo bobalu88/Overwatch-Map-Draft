@@ -1,9 +1,7 @@
-from app import app
+from app.app import db
 from flask_sqlalchemy import SQLAlchemy
 import datetime
 from app.utils import create_map_list
-
-db = SQLAlchemy(app)
 
 
 # Create database model
